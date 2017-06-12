@@ -37,7 +37,7 @@ endif
 test-code: $(OBJS) $(USER_OBJS) 
 	g++ -c -w test-code.cpp 
 	#g++ -o test-code test-code.o  $(OBJS) $(USER_OBJS) $(LIBS)  
-	g++ -o test-code test-code.o  -I/afs/nd.edu/user2/yzhang16/include/ompi $(OBJS) $(USER_OBJS) $(LIBS) -L/afs/nd.edu/user2/yzhang16/lib/ompi -L/afs/nd.edu/user2/yzhang16/lib/ompi/default -lort -lrt -lpthread -lboost_thread-mt 
+	g++ -o test-code test-code.o  -I/afs/nd.edu/user2/yzhang16/include/ompi $(OBJS) $(USER_OBJS) $(LIBS) -L/afs/nd.edu/user2/yzhang16/lib/ompi -L/afs/nd.edu/user2/yzhang16/lib/ompi/default -lrt -lpthread -lboost_thread
 
 clean:
 	-$(RM) *.o test-code
