@@ -40,8 +40,10 @@ std::vector<int> computePorts;
 
 int main(int argc, char* argv[])
 {
-	if(argc < 1)
-		std::cout << "Missing input parameters";
+	if(argc < 2) { 
+	    std::cout << "Usage picco-seed [runtime-config]";
+            exit(-1);
+        }
 
 	seed c;
 	c.init(argv[1]);
